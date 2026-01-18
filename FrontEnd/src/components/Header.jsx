@@ -3,7 +3,7 @@ import logo from '../assets/Images/StreamGpt2.png'
 
 const Header = () => {
   return (
-    <div className='  w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 '>
+    <div className=' mt-7  w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 '>
     <img 
     className=' w-48' 
     src={logo} alt="logo" />

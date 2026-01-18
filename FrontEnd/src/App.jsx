@@ -11,7 +11,7 @@ function App() {
 
   return (
      <div className='w-full'>
-     <Header />
+     {/* <Header /> */}
       <Browse/>
      
      </div>

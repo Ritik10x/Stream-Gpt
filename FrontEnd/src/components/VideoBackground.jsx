@@ -8,7 +8,7 @@ const VideoBackground = ({ movieId }) => {
   useMovieTrailer(movieId)
  
   return (
-    <div className='w-screen relative z-10 '>
+    <div className='-mt-8 w-screen relative z-10 '>
       <iframe // aspect ratio will set video by 16/9
       className='w-screen aspect-video'
      
