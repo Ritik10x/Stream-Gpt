@@ -1,12 +1,30 @@
 import React from 'react'
 import logo from '../assets/Images/StreamGpt2.png'
+import { toggleGptSearchView } from '../Redux/GptSlice'
+import { useDispatch } from 'react-redux'
+import { SUPPORTED_LANGUAGES } from '../Utils/API'
 
 const Header = () => {
+const dispatch = useDispatch()
+
+  const handleGptSearch=()=>{
+    // toggle Gpt Search
+    dispatch(toggleGptSearchView())
+  }
   return (
-    <div className=' mt-7  w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 '>
+    <div className=' flex justify-between   w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 '>
     <img 
     className=' w-48' 
     src={logo} alt="logo" />
+
+<div>
+    <select className='bg-white rounded-lg p-2 m-2'> 
+      {SUPPORTED_LANGUAGES.map(lang=><option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
+    </select>
+    <button className=' px-2 bg-purple-800 mx-4 rounded-lg text-white'
+    onClick={handleGptSearch}
+    >GPTSearch</button>
+    </div>
     </div>
   )
 }
