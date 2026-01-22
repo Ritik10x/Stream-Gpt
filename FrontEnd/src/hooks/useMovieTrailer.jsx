@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { addTrailerVideo } from "../Redux/movieSlice"
 import { useEffect } from "react"
 import {API_options} from "../Utils/API"
@@ -6,6 +6,10 @@ import {API_options} from "../Utils/API"
 const useMovieTrailer = (movieId)=>{
 
  const dispatch = useDispatch()
+
+  const trailerVideo = useSelector(store => store.movies.trailerVideo)
+
+
 
   // const [trailerId, setTrailerId] = useState(null);// ist way using state variable 2nd is with redux store
 
@@ -32,7 +36,8 @@ const useMovieTrailer = (movieId)=>{
 
   useEffect(() => {
 
-    getMovieVideos()
+    !trailerVideo && getMovieVideos()
+    
   }, [])
 
 

@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { API_options } from "../Utils/API"
 import { addNowPlayingMovies } from "../Redux/movieSlice"
 import { useEffect } from "react"
@@ -13,6 +13,9 @@ const useNowPlayingMovies = ()=>{
     // using REdux Here
 const dispatch = useDispatch()
 
+const nowPlayingMovies = useSelector(store=>store.movies.nowPlayingMovies)
+
+
 
 
 
@@ -26,7 +29,11 @@ dispatch(addNowPlayingMovies(json.results))
 }
 
 useEffect(()=>{
-getNowPlayingMovies()
+    // in industry they also write code like this of if-else
+// it means if nowPlaying doesnot have the data from redux store only then it will call an api
+    
+    !nowPlayingMovies && getNowPlayingMovies()
+
 
 },[])
 }

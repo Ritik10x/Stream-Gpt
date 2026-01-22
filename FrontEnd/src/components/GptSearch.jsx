@@ -6,8 +6,9 @@ import { BG_URL } from '../Utils/API'
 const GptSearch = () => {
   return (
     <div>
-        <div className=' absolute -z-10'>
-        <img src={BG_URL} alt="netflix-bg" />
+        <div className=' fixed -z-10'>
+        <img className='w-full'
+        src={BG_URL} alt="netflix-bg" />
       </div>
       <GptSearchBar/>
       <GptMovieSuggestion/>

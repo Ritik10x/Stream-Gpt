@@ -4,6 +4,7 @@ const movieSlice = createSlice({
     name: "movies",
     initialState: {
         nowPlayingMovies: null,// we kept first as empty  so the movies comes from Api will be store here
+        PopularMovies:null,
         trailerVideo:null,
     },                          
 
