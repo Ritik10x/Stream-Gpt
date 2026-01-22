@@ -17,7 +17,7 @@ const useMovieTrailer = (movieId)=>{
   // fetch trailer video and updatinf the store and trailer video data
 
   const getMovieVideos = async () => {
-    const data = await fetch("https://corsproxy.io/https://api.themoviedb.org/3/movie/" +
+    const data = await fetch("https://api.themoviedb.org/3/movie/" +
      movieId   +"/videos?language=en-US",API_options
 
     )

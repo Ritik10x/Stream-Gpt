@@ -20,7 +20,7 @@ const nowPlayingMovies = useSelector(store=>store.movies.nowPlayingMovies)
 
 
 const getNowPlayingMovies =async ()=>{
-const data = await fetch('https://corsproxy.io/https://api.themoviedb.org/3/movie/now_playing',API_options)
+const data = await fetch('https://api.themoviedb.org/3/movie/now_playing',API_options)
 const json = await data.json()
 
 // here i am Dispatching an Action// puhsing 20 movies from json to my store
