@@ -24,66 +24,69 @@ Stream-GPT-AI is a Netflix-inspired movie recommendation web application that le
 🌍 Production Deployment on Netlify with environment variables
 
 
-⚡ Performance Optimization & API Call Reduction
+🚀 Scalability, Performance & Multilanguage Optimization (Stream-GPT-AI)
 
-To ensure scalability and optimal performance, Stream-GPT-AI minimizes unnecessary API calls by leveraging Redux state management and in-memory caching.
+⚡ Optimized application performance by minimizing unnecessary API calls using Redux state management and in-memory caching
 
-API responses from TMDB and Gemini AI are stored centrally in Redux store
+🧠 Stored API responses from TMDB and Gemini AI centrally in the Redux store for efficient reuse
 
-Before making any new API request, the application checks if the required data already exists in the store
+🔍 Implemented conditional data fetching to check existing Redux state before triggering new API requests
 
-If data is available, it is reused instead of triggering another network request
+🔁 Reused cached data to avoid redundant network calls during:
 
-This prevents redundant API calls during:
+🔄 Page navigation
 
-Page navigation
+♻️ Component re-renders
 
-Component re-renders
+↔️ Back-and-forth user interactions
 
-Back-and-forth user interactions
+🌍 Implemented multilanguage support using global state to dynamically switch application language without page reloads
 
-By using this approach, the application supports unlimited user navigation without breaking or overloading APIs, even when users revisit pages multiple times. This design significantly improves performance, reduces latency, and makes the application more scalable for high traffic usage.
+🚫 Prevented API overuse, ensuring unlimited user navigation without breaking or overloading external services
+
+🚀 Improved scalability, reduced latency, and enhanced user experience for high-traffic usage
 
 🔧 Techniques Used
 
-Redux Toolkit for centralized state storage
+🧰 Redux Toolkit for centralized state management
 
-Conditional data fetching logic
+🧠 In-memory caching via global Redux state
 
-In-memory caching via global state
+🎯 Conditional and optimized data fetching logic
 
-Avoidance of unnecessary re-fetching
+🚫 Avoidance of unnecessary re-fetching
 
-
+🌐 Multilanguage implementation using global state configuration
 
 🛠 Tech Stack
 
 Frontend
 
-React (Vite)
+⚛️ React (Vite)
 
-JavaScript
+🟨 JavaScript
 
-Redux Toolkit
+🧰 Redux Toolkit
 
-CSS / Tailwind CSS
+🎨 CSS / Tailwind CSS
 
-Netlify (Deployment)
+🚀 Netlify (Deployment)
 
 Backend
 
-Node.js
+🟢 Node.js
 
-Express.js
+🚂 Express.js
 
-MongoDB (Hosted)
+🍃 MongoDB (Hosted)
 
-bcrypt (Password Hashing)
+🔐 bcrypt (Password Hashing)
 
-Render (Backend Deployment)
+☁️ Render (Backend Deployment)
 
 APIs & Services
 
-Gemini AI
+🤖 Gemini AI
 
-TMDB REST API
+🎬 TMDB REST API
+
