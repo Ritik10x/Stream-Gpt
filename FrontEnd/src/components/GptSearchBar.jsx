@@ -53,8 +53,8 @@ console.log(Gemini_Ai_Movie)
   }
 
   return (
-    <div className='pt-[10%] flex justify-center'>
-      <form className='w-1/2 bg-black grid grid-cols-9'
+    <div className='pt-[40%] md:pt-[10%] flex justify-center'>
+      <form className='w-full md:w-1/2 bg-black grid grid-cols-9'
       onSubmit={(e)=>e.preventDefault()}>
         <input
         ref={searchText}

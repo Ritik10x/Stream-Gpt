@@ -18,16 +18,16 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value))
   }
   return (
-    <div className=' flex justify-between   w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 '>
+    <div className=' flex    w-full fixed px-8 py-2 bg-black bg-linear-to-b-r from-black z-30 flex-col md:flex-row md:justify-between '>
       <img
-        className=' w-48'
+        className=' w-48 ml-20 md:ml-0  '
         src={logo} alt="logo" />
 
-      <div>
-        {showGptSearch && (<select className='bg-white rounded-lg p-2 m-2' onChange={handleLanguageChange} >
+      <div className='flex justify-between'>
+        {showGptSearch && (<select className='bg-white rounded-md p-1 m-1 md:mx-5' onChange={handleLanguageChange} >
           {SUPPORTED_LANGUAGES.map(lang => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
         </select >)}
-        <button className='py-2 px-2 bg-purple-800 mx-4 rounded-lg text-white'
+        <button className=' p-2  bg-blue-600  rounded-md text-white'
           onClick={handleGptSearch}
         >
           {showGptSearch ? "HomePage" :

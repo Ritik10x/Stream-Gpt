@@ -5,14 +5,17 @@ import { BG_URL } from '../Utils/API'
 
 const GptSearch = () => {
   return (
-    <div>
-        <div className=' fixed -z-10'>
-        <img className='w-full'
+    <>
+    <div className=' fixed -z-10'>
+        <img className='h-screen object-cover md:w-full md:h-full'
         src={BG_URL} alt="netflix-bg" />
       </div>
+    <div className=''>
+        
       <GptSearchBar/>
       <GptMovieSuggestion/>
     </div>
+    </>
   )
 }
 

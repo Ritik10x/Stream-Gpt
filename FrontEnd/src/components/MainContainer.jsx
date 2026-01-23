@@ -19,7 +19,7 @@ const MainContainer = () => {
 
 
   return (
-    <div className='-mt-25' >
+    <div className='mt-25 md:-mt-25 ' >
       <VideoTitle title={original_title} overview={overview}/>
       <VideoBackground movieId={id}/>
     </div>
